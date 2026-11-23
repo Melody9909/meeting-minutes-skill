@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.1-confirmed",
+  "document": {
+    "identifier": "9900-F18A-ALMOND",
+    "title": "MEETING MINUTES",
+    "format": "docx",
+    "editable": true
+  },
+  "missing_value": "[Not stated in transcript]",
+  "sections": [
+    {
+      "heading": "Meeting",
+      "type": "fields",
+      "data_key": "meeting",
+      "fields": [
+        {
+          "label": "Date",
+          "key": "date",
+          "type": "string",
+          "required": true
+        },
+        {
+          "label": "Time",
+          "key": "time",
+          "type": "string",
+          "required": true
+        },
+        {
+          "label": "Time Keeper",
+          "key": "time_keeper",
+          "type": "string",
+          "required": true,
+          "fixed_value": "Liming Song"
+        },
+        {
+          "label": "Attendees",
+          "key": "attendees",
+          "type": "string",
+          "required": true
+        },
+        {
+          "label": "Apologies",
+          "key": "apologies",
+          "type": "string",
+          "required": true
+        },
+        {
+          "label": "Please bring/read",
+          "key": "please_bring_read",
+          "type": "string",
+          "required": true
+        },
+        {
+          "label": "Other resources",
+          "key": "other_resources",
+          "type": "string",
+          "required": true
+        },
+        {
+          "label": "Meeting purpose",
+          "key": "meeting_purpose",
+          "type": "string",
+          "required": true
+        },
+        {
+          "label": "Next Meeting",
+          "key": "next_meeting",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "heading": "Agenda",
+      "type": "table",
+      "data_key": "agenda",
+      "dynamic_rows": true,
+      "columns": [
+        {
+          "label": "Item",
+          "key": "item",
+          "generated": "sequential_number"
+        },
+        {
+          "label": "Agenda Item",
+          "key": "agenda_item",
+          "type": "string",
+          "required": true,
+          "non_empty": true
+        },
+        {
+          "label": "Assignee",
+          "key": "assignee",
+          "type": "string",
+          "required": true,
+          "meaning": "Person responsible for presenting or reporting the agenda item",
+          "missing_value": "[Not stated in transcript]"
+        },
+        {
+          "label": "Notes",
+          "key": "notes",
+          "type": "string",
+          "required": true,
+          "non_empty": true
+        }
+      ],
+      "empty_row_value": "None"
+    },
+    {
+      "heading": "Open Actions",
+      "type": "table",
+      "data_key": "open_actions",
+      "dynamic_rows": true,
+      "empty_row_value": "None",
+      "columns": [
+        {
+          "label": "Item",
+          "key": "item",
+          "generated": "sequential_number"
+        },
+        {
+          "label": "Action/Discussed",
+          "key": "action_discussed",
+          "type": "string",
+          "required": true,
+          "non_empty": true,
+          "meaning": "Action text only; do not include owner even when explicitly mentioned in transcript"
+        },
+        {
+          "label": "Deadline",
+          "key": "deadline",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "generation_rule": "Always leave blank for later manual completion, even if transcript mentions a date"
+        }
+      ]
+    },
+    {
+      "heading": "Questions for Mentor",
+      "type": "list",
+      "data_key": "questions_for_mentor",
+      "item_type": "string",
+      "empty_value": "None"
+    },
+    {
+      "heading": "Questions for Client",
+      "type": "list",
+      "data_key": "questions_for_client",
+      "item_type": "string",
+      "empty_value": "None"
+    }
+  ],
+  "rendering": {
+    "preserve_section_and_field_order": true,
+    "preserve_original_template_file": true,
+    "exact_visual_style_required": false,
+    "pdf_or_png_required": false
+  }
+}
