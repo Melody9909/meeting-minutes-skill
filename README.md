@@ -172,4 +172,4 @@ python scripts/generate_minutes.py <meeting-json> <output-docx>
 
 当前版本聚焦个人 Scholar Hub 项目，使用固定角色映射、项目编号和 Tutor Word 模板。后续可扩展更多会议类型与转录质量样本，建立人工标注基线，并评估内容覆盖、分类表现和人工复核成本。
 
-Tutor 模板来自学校提供材料，当前用于个人授权场景；包含模板的仓库应保持 Private。
+Tutor 模板来自学校提供材料，当前用于个人授权场景；
