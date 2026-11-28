@@ -27,3 +27,6 @@ test-report.md
 ~$*
 .DS_Store
 Thumbs.db
+
+# Local portfolio fact checking
+/00_内部校验清单.md
